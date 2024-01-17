@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /api
+
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: '/profile/swagger/v3/api-docs'
+  swagger-ui:
+    path: '/profile/swagger-ui'
+  paths-to-match: [ '/**', '/test/**' ]
+
+file-location:
+  attributes: classpath:attributes.csv
+  options: classpath:options.csv
